@@ -1,0 +1,17 @@
+
+<ng-container *ngIf="!position">
+  <ng-container *ngTemplateOutlet="hello"></ng-container>
+</ng-container>
+
+<button (click)="position = false">above</button>
+<button (click)="position = true">below</button>
+
+
+<ng-container *ngIf="position">
+  <ng-container *ngTemplateOutlet="hello"></ng-container>
+</ng-container>
+
+
+<ng-template #hello>
+  <hello name="{{name}}"></hello>
+</ng-template>
